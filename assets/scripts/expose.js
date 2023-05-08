@@ -10,6 +10,7 @@ function init() {
   const volume = document.querySelector('#volume');
   const volumeIcon = document.querySelector('#volume-controls img');
   const confetti = new JSConfetti();
+  var playAudio;
 
   select.addEventListener('change', function() {
     switch(select.value) {
@@ -28,7 +29,8 @@ function init() {
     }
   })
   button.addEventListener('click', function() {
-    audio.play();
+    playAudio = new Audio(audio.src);
+    playAudio.play();
     if (select.value == "party-horn") {
       confetti.addConfetti();
       confetti.clearCanvas();
@@ -49,7 +51,7 @@ function init() {
     else {
       volumeIcon.src = "assets/icons/volume-level-3.svg"; 
     }
-    audio.volume = volume.value/100;
+    playAudio.volume = volume.value/100;
   })
 }
 
