@@ -30,6 +30,7 @@ function init() {
   })
   button.addEventListener('click', function() {
     playAudio = new Audio(audio.src);
+    playAudio.volume = volume.value/100;
     playAudio.play();
     if (select.value == "party-horn") {
       confetti.addConfetti();
