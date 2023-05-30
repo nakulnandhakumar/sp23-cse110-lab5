@@ -15,16 +15,16 @@ function init() {
   select.addEventListener('change', function() {
     switch(select.value) {
       case "air-horn":
-        image.src = "/assets/images/air-horn.svg";
-        audio.src = "/assets/audio/air-horn.mp3";
+        image.src = "assets/images/air-horn.svg";
+        audio.src = "assets/audio/air-horn.mp3";
         break;
       case "car-horn":
-        image.src = "/assets/images/car-horn.svg";
-        audio.src = "/assets/audio/car-horn.mp3";
+        image.src = "assets/images/car-horn.svg";
+        audio.src = "assets/audio/car-horn.mp3";
         break;
       case "party-horn":
-        image.src = "/assets/images/party-horn.svg";
-        audio.src = "/assets/audio/party-horn.mp3";
+        image.src = "assets/images/party-horn.svg";
+        audio.src = "assets/audio/party-horn.mp3";
         break;
     }
   })
